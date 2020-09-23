@@ -24,3 +24,12 @@ echo "grep BTS0[1-8] Herrboldt_output2.txt >> Herrboldt_output.txt" >> Herrboldt
 ##remove the unwanted intermediate output files
 echo "rm Herrboldt_output1.txt" >> Herrboldt_child_script.sh
 echo "rm Herrboldt_output2.txt" >> Herrboldt_child_script.sh
+
+##compress final output
+echo "tar -czvf Herrboldt_output.tar.gz Herrboldt_output.txt" >> Herrboldt_child_script.sh
+
+##remove uncompressed file
+echo "rm Herrboldt_output.txt" >> Herrboldt_child_script.sh
+
+##RUN THE CHILD SCRIPT YAASSSSSSSSSSS
+./Herrboldt_child_script.sh
